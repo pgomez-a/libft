@@ -10,7 +10,7 @@ int	ft_atoi(const char *str)
 		count++;
 	if (str[count] == '+' || str[count] == '-')
 	{
-		sign = str[count] == '+' ? '+' : '-';
+		sign = str[count] == '-' ? '-' : '+';
 		count++;
 	}
 	if (str[count] >= '0' && str[count] <= '9')
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 			num += str[count + 1] - '0';
 			count++;
 		}
-		return (sign == '+' ? num : -num);
+		return (sign == '-' ? -num : num);
 	}
 	return (0);
 }
