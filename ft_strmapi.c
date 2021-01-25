@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/25 13:20:24 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 13:22:59 by pgomez-a         ###   ########.fr       */
+/*   Created: 2021/01/25 10:09:03 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/25 10:57:14 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	void	*temp;
-	int		i;
+#include <stdlib.h>
 
-	i = 0;
-	temp = (void *)s;
-	while (i < ((int)n))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*result;
+	int		count;
+
+	count = 0;
+	while (s[count])
+		count++;
+	if (!(result = (char *)malloc((count + 1) * sizeof(char))))
+		return (0);
+	result[count] = '\0';
+	while (count > 0)
 	{
-		if ((*(unsigned char *)temp) == (unsigned char)c)
-			return (temp);
-		temp++;
-		i++;
+		count--;
+		result[count] = (*f)(count, s[count]);
 	}
-	return (0);
+	return (result);
 }

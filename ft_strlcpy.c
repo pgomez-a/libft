@@ -1,4 +1,16 @@
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/25 13:40:37 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/25 13:48:52 by pgomez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	count;
 	unsigned int	output;
@@ -7,11 +19,11 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	while (src[output] != '\0')
 		output++;
 	count = 0;
-	while (dest[count] != '\0' && count < (size - 1))
+	while (dst[count] != '\0' && count < (dstsize - 1))
 	{
-		dest[count] = src[count];
+		dst[count] = src[count];
 		count++;
 	}
-	dest[count++] = '\0';
+	dst[count++] = '\0';
 	return (output);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/25 14:06:30 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/25 14:13:28 by pgomez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int	count;
@@ -20,6 +32,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			}
 			count_t = 0;
 		}
+		if (!needle[0])
+			return ((char *)haystack);
 		count++;
 	}
 	return (0);

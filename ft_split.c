@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 static	int	ft_pos_row(char const *s, char c, int index)
 {
@@ -91,12 +90,4 @@ char		**ft_split(char const *s, char c)
 		index++;
 	}
 	return (result);
-}
-
-int	main(void)
-{
-	char	**tabla;
-	char	s[] = "me llamo Pablo";
-
-	tabla = ft_split(s, ' ');
 }

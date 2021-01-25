@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/25 13:20:24 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 13:22:59 by pgomez-a         ###   ########.fr       */
+/*   Created: 2021/01/25 11:37:28 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/25 11:51:56 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	void	*temp;
-	int		i;
+#include <unistd.h>
 
-	i = 0;
-	temp = (void *)s;
-	while (i < ((int)n))
-	{
-		if ((*(unsigned char *)temp) == (unsigned char)c)
-			return (temp);
-		temp++;
-		i++;
-	}
-	return (0);
+char	*ft_itoa(int n);
+void	ft_putstr_fd(char *s, int n);
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	*num_str;
+
+	num_str = ft_itoa(n);
+	ft_putstr_fd(num_str, fd);
 }
