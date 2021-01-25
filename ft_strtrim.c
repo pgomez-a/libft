@@ -57,7 +57,8 @@ char		*ft_strtrim(char const *s1, char const *s2)
 	begin = ft_num_begin(s1, s2);
 	end = ft_num_end(s1, s2);
 	count = end - begin;
-	result = (char *)malloc((count + 2) * sizeof(char));
+	if (!(result = (char *)malloc((count + 2) * sizeof(char))))
+		return (0);
 	count = 0;
 	if (begin + end >= 0)
 	{
