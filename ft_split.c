@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/26 08:35:49 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/26 08:35:52 by pgomez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 static	int	ft_pos_row(char const *s, char c, int index)
@@ -15,8 +27,7 @@ static	int	ft_pos_row(char const *s, char c, int index)
 			verif++;
 		count++;
 	}
-	(s[count] == '\0') ? count++ : 0xDEBAF;	
-
+	(s[count] == '\0') ? count++ : 0xDEBAF;
 	return (count);
 }
 
@@ -55,8 +66,7 @@ static int	ft_num_col(char const *s, char c)
 	return (num_col);
 }
 
-
-static	void	ft_set_value(char *table, char const *s, int row, int pos)
+static void	ft_set_value(char *table, char const *s, int row, int pos)
 {
 	table[row] = '\0';
 	row--;
@@ -69,14 +79,13 @@ static	void	ft_set_value(char *table, char const *s, int row, int pos)
 	}
 }
 
-
 char		**ft_split(char const *s, char c)
 {
 	char	**result;
-	int	cols;
-	int	row;
-	int	index;
-	int	pos;
+	int		cols;
+	int		row;
+	int		index;
+	int		pos;
 
 	cols = ft_num_col(s, c);
 	result = (char **)malloc((cols + 1) * sizeof(char *));

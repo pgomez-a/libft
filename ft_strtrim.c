@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/26 08:26:38 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/01/26 08:27:00 by pgomez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-static int	ft_num_begin(char const*s1, char const *s2)
+static int	ft_num_begin(char const *s1, char const *s2)
 {
 	int	count;
 	int	count_2;
@@ -50,9 +62,9 @@ static int	ft_num_end(char const *s1, char const *s2)
 char		*ft_strtrim(char const *s1, char const *s2)
 {
 	char	*result;
-	int	begin;
-	int	end;
-	int	count;
+	int		begin;
+	int		end;
+	int		count;
 
 	begin = ft_num_begin(s1, s2);
 	end = ft_num_end(s1, s2);
