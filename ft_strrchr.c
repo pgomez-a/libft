@@ -6,9 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 14:03:27 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 14:05:58 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:41:38 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

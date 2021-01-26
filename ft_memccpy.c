@@ -6,9 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 13:11:14 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 13:12:23 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:36:24 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

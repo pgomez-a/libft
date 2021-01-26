@@ -6,9 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 12:20:30 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 12:31:48 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:35:25 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

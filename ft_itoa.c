@@ -6,11 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 08:56:13 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/25 11:42:24 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:56:42 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_len_num(int n)
 {

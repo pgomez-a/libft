@@ -6,11 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:35:49 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 08:35:52 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:55:15 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static	int	ft_pos_row(char const *s, char c, int index)
 {

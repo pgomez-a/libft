@@ -6,11 +6,11 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:26:38 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 08:27:00 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/26 09:54:14 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_num_begin(char const *s1, char const *s2)
 {
