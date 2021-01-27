@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:35:49 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:55:15 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/27 09:49:53 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static	int	ft_pos_row(char const *s, char c, int index)
 
 	verif = 0;
 	count = 0;
-	if (s[count] == c)
+	while (s[count] == c && s[count])
 		count++;
 	while (s[count] && verif <= index)
 	{
-		if (s[count] == c && s[count + 1] != c)
+		if (s[count] == c && s[count - 1] != c)
 			verif++;
 		count++;
 	}
@@ -56,7 +56,7 @@ static int	ft_num_col(char const *s, char c)
 	num_col = 0;
 	while (s[count])
 	{
-		if (s[count] == c)
+		if (s[count] == c && s[count + 1] != c)
 			num_col++;
 		count++;
 	}
@@ -89,6 +89,7 @@ char		**ft_split(char const *s, char c)
 
 	cols = ft_num_col(s, c);
 	result = (char **)malloc((cols + 1) * sizeof(char *));
+	result[cols] = NULL;
 	index = 0;
 	while (index < cols)
 	{
