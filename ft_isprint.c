@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:36:04 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:48:46 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/28 11:29:58 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	unsigned char	comp;
-
-	comp = (unsigned char)c;
-	if (comp >= 32 && comp <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);

@@ -6,12 +6,13 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 11:47:25 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/27 14:18:47 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/01/28 14:06:43 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 char	sum_1(unsigned int n, char c);
@@ -35,13 +36,13 @@ int	main(void)
 	printf("bzero después x2: %s\n", ptr + 5);
 	*/
 
-	/*
-	char	dst[] = "00000";
+	/*	
+	char	dst[] = "";
 	char	src[] = "1111111111";
 
-	printf("memcpy antes: %s\n", dst);
-	ft_memcpy(dst, src, 3);
-	printf("memcpy después: %s\n", dst);
+	//printf("memcpy antes: %s\n", dst);
+	ft_memcpy(NULL, NULL, 3);
+	//printf("memcpy después: %s\n", dst);
 	*/
 
 	/*
@@ -53,12 +54,12 @@ int	main(void)
 	printf("memccpy después: %s\n", dst);
 	*/
 
-	/*
+	/*	
 	char	dst[] = "00000";
 	char	src[] = "1111111111";
 
 	printf("memmove antes: %s\n", dst);
-	ft_memmove(dst, src, 3);
+	ft_memmove(dst, src, 8);
 	printf("memmove después: %s\n", dst);
 	*/
 
@@ -88,24 +89,25 @@ int	main(void)
 	printf("Len: %d\n", num);
 	*/	
 
-	/*
-	char	dst[] = "0000000000";
-	char	src[] = "11111";
+	/*	
+	char	dst[] = "HELLO WORLD";
+	char	src[] = "1";
 	int		num;
-
-	num = ft_strlcpy(dst, src, 2);
-	printf("strlcpy: %d\n", num);
+	
+	printf("%s\n", dst);
+	num = ft_strlcpy(dst, src, 15);
+	printf("strlcpy: %s\n", dst);
 	*/
 
-	/*	
-	char	dst[] = "11111";
-	char	src[] = "0000000000";
+		
+	char	dst[] = "11111111111";
+	char	src[] = "2222";
 	int		num;
 
-	num = strlcat(dst, src, 2);
+	num = strlcat(dst, src, 8);
 	printf("strlcat: %d\n", num);
 	printf("%s\n", dst);
-	*/	
+		
 
 	/*	
 	char	ptr[] = "0001000100";
@@ -132,9 +134,9 @@ int	main(void)
 	printf("strnstr: %s\n", result);
 	*/
 
-	/*
-	char	s1[] = "bola";
-	char	s2[] = "hola";
+	/*	
+	char	s2[] = "bola";
+	char	s1[] = "hola";
 	int		num;
 
 	num = ft_strncmp(s1, s2, 4);
@@ -149,10 +151,10 @@ int	main(void)
 	printf("atoi: %d\n", num);
 	*/
 
-	/*
+	/*	
 	int	num;
 
-	num = ft_isalpha('o');
+	num = ft_isalpha('hello');
 	printf("Verif: %d\n", num);
 	*/
 
