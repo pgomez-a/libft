@@ -87,15 +87,19 @@ char		**ft_split(char const *s, char c)
 	int		index;
 	int		pos;
 
+	if (s == NULL)
+		return (NULL);
 	cols = ft_num_col(s, c);
-	result = (char **)malloc((cols + 1) * sizeof(char *));
+	if (!(result = (char **)malloc((cols + 1) * sizeof(char *))))
+		return (0);;
 	result[cols] = NULL;
 	index = 0;
 	while (index < cols)
 	{
 		pos = ft_pos_row(s, c, index);
 		row = ft_num_row(s, c, pos);
-		result[index] = (char *)malloc(row * sizeof(char));
+		if (!(result[index] = (char *)malloc((row + 1) * sizeof(char))))
+			return (0);
 		ft_set_value(result[index], s, row, pos);
 		index++;
 	}

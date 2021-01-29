@@ -12,10 +12,40 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+static int	len_num(n)
 {
-	char	*num_str;
+	int	len;
+	int	count;
 
-	num_str = ft_itoa(n);
-	ft_putstr_fd(num_str, fd);
+	count = n;
+	len = 0;
+	while (count > 0)
+	{
+		len++;
+		count /= 10;
+	}
+	return (len);
+}
+
+void		ft_putnbr_fd(int n, int fd)
+{
+	char	result[len_num(n)];
+	int	num;
+	int	count;
+
+	num = n;
+	count = 0;
+	while (num > 0)
+	{
+		result[count] = (num % 10) + '0';
+		count++;
+		num /= 10;
+	}
+	result[count] = '\0';
+	(n < 0) ? write(fd, "-", 1) : 0xDEBAF;
+	while (count > 0)
+	{
+		ft_putchar_fd(result[count - 1], fd);
+		count--;
+	}
 }

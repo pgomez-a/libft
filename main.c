@@ -99,15 +99,15 @@ int	main(void)
 	printf("strlcpy: %s\n", dst);
 	*/
 
-		
+	/*
 	char	dst[] = "11111111111";
 	char	src[] = "2222";
 	int		num;
 
-	num = strlcat(dst, src, 8);
+	num = ft_strlcat(dst, src, 14);
 	printf("strlcat: %d\n", num);
 	printf("%s\n", dst);
-		
+	*/
 
 	/*	
 	char	ptr[] = "0001000100";
@@ -125,12 +125,12 @@ int	main(void)
 	printf("strrchr: %s\n", result);
 	*/
 
-	/*
-	char	haystack[] = "0001011100";
-	char	needle[] = "1";
+	/*	
+	char	haystack[] = "201000";
+	char	needle[] = "01";
 	char	*result;
 
-	result = ft_strnstr(haystack, needle, 4);
+	result = strnstr(haystack, needle, 4);
 	printf("strnstr: %s\n", result);
 	*/
 
@@ -144,10 +144,10 @@ int	main(void)
 	*/
 
 	/*	
-	char	ptr[] = "34243243234234342342342422";
+	char	ptr[] = "42949672942949672955";
 	int		num;
 
-	num = atoi(ptr);
+	num = ft_atoi(ptr);
 	printf("atoi: %d\n", num);
 	*/
 
@@ -196,7 +196,7 @@ int	main(void)
 
 	result = ft_calloc(4, 1);
 	printf("calloc: %s\n", result);
-	*/
+	*/	
 
 	/*
 	char	ptr[] = "123456789";
@@ -206,16 +206,16 @@ int	main(void)
 	printf("strdup: %s\n", result);
 	printf("Dir ptr: %p\n", &ptr);
 	printf("Dir result: %p\n", &result);
-	*/
+	*/	
 
-/*	
+	/*
 	char	ptr[] = "123456789";
 	char	*result;
 
 	printf("substr antes: %s\n", ptr);
-	result = ft_substr(ptr, 3, 4);
+	result = ft_substr(ptr, 20, 4);
 	printf("substr después: %s\n", result);
-*/	
+	*/	
 
 	/*
 	char	s1[] = "00000";
@@ -235,11 +235,11 @@ int	main(void)
 	printf("strtrim: %s\n", result);
 	*/
 
-	/*
-	char	s1[] = "0 11  222   3333";
+	/*	
+	char	s1[0];
 	char	**result;
 
-	result = ft_split(s1, ' ');
+	result = ft_split(s1, '1');
 	for (int i = 0; result[i]; i++)
 	{
 		printf("result[%d]: %s\n", i, result[i]);
@@ -249,7 +249,7 @@ int	main(void)
 	/*	
 	char	*result;
 
-	result = itoa(8328748);
+	result = ft_itoa(10);
 	printf("itoa: %s\n", result);
 	*/
 
@@ -265,8 +265,8 @@ int	main(void)
 	ft_putchar_fd('0', 1);
 	ft_putstr_fd(" 11", 1);
 	ft_putendl_fd("  222", 1);
-	ft_putnbr_fd(111, 1);
 	*/
+	ft_putnbr_fd(111999, 1);
 
 }
 

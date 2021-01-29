@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 			num += str[count + 1] - '0';
 			count++;
 		}
-		return (sign == '-' ? -num : num);
+		return (sign == '-' ? -(int)num : (int)num);
 	}
 	return (0);
 }
