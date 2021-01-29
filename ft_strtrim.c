@@ -66,6 +66,8 @@ char		*ft_strtrim(char const *s1, char const *s2)
 	int		end;
 	int		count;
 
+	if (!s1 || !s2)
+		return (NULL);
 	begin = ft_num_begin(s1, s2);
 	end = ft_num_end(s1, s2);
 	count = end - begin;

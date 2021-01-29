@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	count;
 
+	if (!s)
+		return;
 	count = 0;
 	while (s[count])
 	{

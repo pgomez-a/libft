@@ -235,16 +235,16 @@ int	main(void)
 	printf("strtrim: %s\n", result);
 	*/
 
-	/*	
-	char	s1[0];
+		
+	char	s1[] = "split   ||this|for|me||||!|";
 	char	**result;
 
-	result = ft_split(s1, '1');
+	result = ft_split(s1, '|');
 	for (int i = 0; result[i]; i++)
 	{
 		printf("result[%d]: %s\n", i, result[i]);
 	}
-	*/	
+		
 
 	/*	
 	char	*result;
@@ -266,7 +266,7 @@ int	main(void)
 	ft_putstr_fd(" 11", 1);
 	ft_putendl_fd("  222", 1);
 	*/
-	ft_putnbr_fd(111999, 1);
+	ft_putnbr_fd(-2147483648, 1);
 
 }
 

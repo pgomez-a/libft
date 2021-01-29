@@ -35,17 +35,22 @@ void		ft_putnbr_fd(int n, int fd)
 
 	num = n;
 	count = 0;
-	while (num > 0)
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
 	{
-		result[count] = (num % 10) + '0';
-		count++;
-		num /= 10;
-	}
-	result[count] = '\0';
-	(n < 0) ? write(fd, "-", 1) : 0xDEBAF;
-	while (count > 0)
-	{
-		ft_putchar_fd(result[count - 1], fd);
-		count--;
+		while (num > 0)
+		{
+			result[count] = (num % 10) + '0';
+			count++;
+			num /= 10;
+		}
+		result[count] = '\0';
+		(n < 0) ? write(fd, "-", 1) : 0xDEBAF;
+		while (count > 0)
+		{
+			ft_putchar_fd(result[count - 1], fd);
+			count--;
+		}	
 	}
 }

@@ -59,7 +59,7 @@ char		*ft_itoa(int n)
 	int		len_num;
 
 	len_num = ft_len_num(n);
-	if (n < 0)
+	if (n <= 0)
 		len_num++;
 	if (!(result = (char *)malloc((len_num + 1) * sizeof(char))))
 		return (0);

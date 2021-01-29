@@ -27,7 +27,7 @@ static	int	ft_pos_row(char const *s, char c, int index)
 			verif++;
 		count++;
 	}
-	(s[count] == '\0') ? count++ : 0xDEBAF;
+	(s[count] == '\0' && s[count - 1] != c) ? count++ : 0xDEBAF;
 	return (count);
 }
 
