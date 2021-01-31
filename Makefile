@@ -14,7 +14,11 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c
 
 OBJS	= ${SRCS:.c=.o}
 
-.PHONY:	all clean fclean re
+BON		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+
+BON_OB	= ${BON:.c=.o}
+
+.PHONY:	all clean fclean re bonus
 
 NAME	= libft.a
 
@@ -32,8 +36,11 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
+bonus:		${OBJS} ${BON_OB}
+			@ar rc ${NAME} ${OBJS} ${BON_OB}
+
 clean:
-			@${RM} ${OBJS}
+			@${RM} ${OBJS} ${BON_OB}
 
 fclean:		clean
 			@${RM} ${NAME}
@@ -41,7 +48,7 @@ fclean:		clean
 re:			fclean all
 
 normi:
-			@norminette -R CheckForbiddenSourceHeader ${SRCS}
+			@norminette -R CheckForbiddenSourceHeader ${SRCS} ${BON}
 
 normi_h:
 			@norminette -R CheckDefine libft.h
