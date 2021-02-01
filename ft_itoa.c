@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 08:56:13 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:56:42 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/01 13:16:35 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,12 @@ char		*ft_itoa(int n)
 		len_num++;
 	if (!(result = (char *)malloc((len_num + 1) * sizeof(char))))
 		return (0);
-	result = ft_str_num(result, n, len_num);
+	if (n > 0 && n < 10)
+	{
+		result[0] = n + '0';
+		result[1] = '\0';
+	}
+	else
+		result = ft_str_num(result, n, len_num);
 	return (result);
 }

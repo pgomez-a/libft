@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 11:47:25 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/01 09:22:48 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/01 13:16:54 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,12 +246,12 @@ int	main(void)
 	}
 	*/	
 
-	/*	
+	
 	char	*result;
 
-	result = ft_itoa(10);
+	result = ft_itoa(9);
 	printf("itoa: %s\n", result);
-	*/
+
 
 	/*	
 	char	ptr[] = "9999";
@@ -266,7 +266,7 @@ int	main(void)
 	ft_putstr_fd(" 11", 1);
 	ft_putendl_fd("  222", 1);
 	*/
-	ft_putnbr_fd(-987, 1);
+	/*ft_putnbr_fd(0, 1);*/
 
 }
 
