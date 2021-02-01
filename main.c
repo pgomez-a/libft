@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 11:47:25 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/28 14:06:43 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/01 09:22:48 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -235,7 +235,7 @@ int	main(void)
 	printf("strtrim: %s\n", result);
 	*/
 
-		
+	/*
 	char	s1[] = "split   ||this|for|me||||!|";
 	char	**result;
 
@@ -244,7 +244,7 @@ int	main(void)
 	{
 		printf("result[%d]: %s\n", i, result[i]);
 	}
-		
+	*/	
 
 	/*	
 	char	*result;
@@ -266,7 +266,7 @@ int	main(void)
 	ft_putstr_fd(" 11", 1);
 	ft_putendl_fd("  222", 1);
 	*/
-	ft_putnbr_fd(-2147483648, 1);
+	ft_putnbr_fd(-987, 1);
 
 }
 

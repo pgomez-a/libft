@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:35:49 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/27 09:49:53 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/01 08:59:30 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char		**ft_split(char const *s, char c)
 		return (NULL);
 	cols = ft_num_col(s, c);
 	if (!(result = (char **)malloc((cols + 1) * sizeof(char *))))
-		return (0);;
+		return (0);
 	result[cols] = NULL;
 	index = 0;
 	while (index < cols)

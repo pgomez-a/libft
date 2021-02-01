@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 11:24:52 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 13:35:40 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/01 09:05:27 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	count;
 
 	if (!s)
-		return;
+		return ;
 	count = 0;
 	while (s[count])
 	{
