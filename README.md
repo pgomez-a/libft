@@ -88,35 +88,35 @@ You may be wondering how to use and implement this functions in your code. As yo
 
        void	*ft_memset(void *b, int c, size_t len)
        
-The ft_memset() function fills the first len bytes of the memory area pointed to by b with the constant byte c.
+The ft_memset() function fills the first len bytes of the memory area pointed to by b with the constant byte c.<br>
 The ft_memset() function returns a pointer to the memory area b.
 
 **ft_bzero**
 
        void	ft_bzero(void *s, size_t n)
        
-The ft_bzero() function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
+The ft_bzero() function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.<br>
 The ft_bzero() function does no return anything.
 
 **ft_memcpy**
 
        void	*ft_memcpy(void *dst, const void *src, size_t n)
        
-The ft_memcpy() function copies n bytes from memory area src to memory area dst. The memory areas must not overlap. Use ft_memmove if the memory areas do overlap.
+The ft_memcpy() function copies n bytes from memory area src to memory area dst. The memory areas must not overlap. Use ft_memmove if the memory areas do overlap.<br>
 The ft_memcpy() function returns a pointer to dst.
 
 **ft_memccpy**
 
        void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
        
-The ft_memccpy() function copies no more than n bytes from memory area src to memory area dst, stopping when the character c is found. If the memory areas overlap, the results are undefined.
+The ft_memccpy() function copies no more than n bytes from memory area src to memory area dst, stopping when the character c is found. If the memory areas overlap, the results are undefined.<br>
 The ft_memccpy() function returns a pointer to the next character in dst after c, or NULL if c was not found in the first n characters of src.
 
 **ft_memmove**
 
        void	*ft_memmove(void *dst, const void *src, size_t len)
        
-The ft_memmove() function copies n bytes from memory area src to memory area dst. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dst, and the bytes are then copied from the temporary array to dst.
+The ft_memmove() function copies n bytes from memory area src to memory area dst. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dst, and the bytes are then copied from the temporary array to dst.<br>
 The ft_memmove() function returns a pointer to dst.
 
 
