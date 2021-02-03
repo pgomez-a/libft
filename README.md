@@ -79,6 +79,9 @@ If you want to access the content of this project and learn more about the behav
        gcc -Wall -Werror -Wextra main.c -L. -lft
        
        
+       
+ ## Info for recruiters
+ 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
 In this case, the functions you find are the ones that have been useful to me to date. If you think that you won't use many of these functions, try creating your
