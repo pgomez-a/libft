@@ -119,6 +119,33 @@ The ft_memccpy() function returns a pointer to the next character in dst after c
 The ft_memmove() function copies n bytes from memory area src to memory area dst. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dst, and the bytes are then copied from the temporary array to dst.<br>
 The ft_memmove() function returns a pointer to dst.
 
+**ft_memchr**
+
+       void	*ft_memchr(const void *s, int c, size_t n)
+       
+The ft_memchr() function scans the initial n bytes of the memory area pointed to by s for the first instance of c. Both c and the bytes of the memory area pointed to by s are interpreted as unsigned char.<br>
+The ft_memchr() function returns a pointer to the matching byte or NULL if the characters does not occur in the given memory area.
+
+**ft_memcmp**
+
+       int	ft_memcmp(const void *s1, const void *s2, size_t n)
+       
+The ft_memcmp() function compares the first n bytes (each interpreted as unsigned char) of the memory areas s1 and s2.<br>
+The ft_memcmp() function returns an interger less than, equal to, or greater than zero if the first n bytes of s1 is found, respectively, to be less than, to match, or be greater than the first n bytes of s2. For a nonzero return value, the sign if determined by the sign of the difference between the first pair of bytes (interpreted as unsigned char) that differ in s1 and s2. If n is zero, the return value is zero.
+
+**ft_strlen**
+
+       size_t	ft_strlen(const char *s)
+       
+The ft_strlen() function calculates the length of the string s, excluding the terminating null byte '\0'.<br>
+The ft_strlen() function  returns the number of bytes in the string s.
+
+**ft_strlcpy**
+
+       size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+       
+The ft_strlcpy() function copies up to dstsize - 1 characters from the NULL terminated string src to dst, NULL terminating the result.<br>
+The ft_strlcpy() function returns the total length fo the string they tried to create. That means the length of src.
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
