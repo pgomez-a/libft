@@ -78,10 +78,48 @@ If you want to access the content of this project and learn more about the behav
 
        gcc -Wall -Werror -Wextra main.c -L. -lft
        
+## Info for recruiters
+If you are interested in my work, please do not hesitate to contact me. I am open to join new and innovative projects, especially if they are related to Big Data and Artificial Intelligence. Remember that on my Read me page you can contact me in different ways, having access to my Linkedin account and my email.
+
+## Wiki Functions
+You may be wondering how to use and implement this functions in your code. As you can imagine, you can access the manual for most of the funcions that are currently on the libft, but there are other ones that don't have an specific man page in the terminal. So, to make you the work easier, I have written the behaviour of each function so that you can see in the same page what all functions have to do.
+
+**ft_memset**
+
+       void	*ft_memset(void *b, int c, size_t len)
        
+The ft_memset() function fills the first len bytes of the memory area pointed to by b with the constant byte c.
+The ft_memset() function returns a pointer to the memory area b.
+
+**ft_bzero**
+
+       void	ft_bzero(void *s, size_t n)
        
- ## Info for recruiters
- 
+The ft_bzero() function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
+The ft_bzero() function does no return anything.
+
+**ft_memcpy**
+
+       void	*ft_memcpy(void *dst, const void *src, size_t n)
+       
+The ft_memcpy() function copies n bytes from memory area src to memory area dst. The memory areas must not overlap. Use ft_memmove if the memory areas do overlap.
+The ft_memcpy() function returns a pointer to dst.
+
+**ft_memccpy**
+
+       void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+       
+The ft_memccpy() function copies no more than n bytes from memory area src to memory area dst, stopping when the character c is found. If the memory areas overlap, the results are undefined.
+The ft_memccpy() function returns a pointer to the next character in dst after c, or NULL if c was not found in the first n characters of src.
+
+**ft_memmove**
+
+       void	*ft_memmove(void *dst, const void *src, size_t len)
+       
+The ft_memmove() function copies n bytes from memory area src to memory area dst. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does not overlap src or dst, and the bytes are then copied from the temporary array to dst.
+The ft_memmove() function returns a pointer to dst.
+
+
  ## In closing...
 As you do your own projects, you can add new functions to this library.
 In this case, the functions you find are the ones that have been useful to me to date. If you think that you won't use many of these functions, try creating your
