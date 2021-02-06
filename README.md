@@ -159,9 +159,22 @@ The ft_strlcat() function returns the total length for the string it tried to cr
        char	*ft_strchr(const char *s, int c)
        
 The ft_strchr() function returns a pointer to the first occurrence of the character c in the string s.<br>
-The ft_strchr() function returns a pointer to the matched character or NULL if the character is not found. The terminating NULL byte is considered part of the string, so that if c is specified ad '\0', these functions return a pointer to the terminator.
+The ft_strchr() function returns a pointer to the matched character or NULL if the character is not found. The terminating NULL byte is considered part of the string, so that if c is specified as '\0', these functions return a pointer to the terminator.
 
 **ft_strrchr**
+
+       char	*ft_strrchr(const char *s, int c)
+       
+The ft_strrchr() function returns a pointer to the last occurence of the character c in the string s.<br>
+The ft_strrchr() function returns a pointer to the matched character or NULL if the character is not found. The terminating NULL byte is considered part of the string, so that if c is specified as '\0', these functions return a pointer to the terminator.
+
+**ft_strnstr**
+
+       char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+       
+The strnstr() function locates the first occurrence of the null-terminated string needle in the string haystack, where not more than len characters are searched.  Characters that appear after a '\0' character are not searched.<br>
+If needle is an empty string, haystack is returned; if needle occurs nowhere in haystack, NULL is returned; otherwise a pointer to the first character of the first occurrence of needle is returned.
+
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
