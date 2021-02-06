@@ -145,7 +145,23 @@ The ft_strlen() function  returns the number of bytes in the string s.
        size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
        
 The ft_strlcpy() function copies up to dstsize - 1 characters from the NULL terminated string src to dst, NULL terminating the result.<br>
-The ft_strlcpy() function returns the total length fo the string they tried to create. That means the length of src.
+The ft_strlcpy() function returns the total length fo the string it tried to create. That means the length of src.
+
+**ft_strlcat**
+
+       size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+       
+The ft_strlcat() function appends the NULL terminated string src to the end of dst. It will append at most size - strlen(dst) - 1 bytes, NULL terminating the result.<br>
+The ft_strlcat() function returns the total length for the string it tried to create. That means the initial length of dst plus the length of src.
+
+**ft__strchr**
+
+       char	*ft_strchr(const char *s, int c)
+       
+The ft_strchr() function returns a pointer to the first occurrence of the character c in the string s.<br>
+The ft_strchr() function returns a pointer to the matched character or NULL if the character is not found. The terminating NULL byte is considered part of the string, so that if c is specified ad '\0', these functions return a pointer to the terminator.
+
+**ft_strrchr**
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
