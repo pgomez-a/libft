@@ -1,50 +1,26 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/26 08:35:49 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/01 08:59:30 by pgomez-a         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-static	int	ft_pos_row(char const *s, char c, int index)
-{
-	int	verif;
-	int	count;
-
-	verif = 0;
-	count = 0;
-	while (s[count] == c && s[count])
-		count++;
-	while (s[count] && verif <= index)
-	{
-		if (s[count] == c && s[count - 1] != c)
-			verif++;
-		count++;
-	}
-	(s[count] == '\0' && s[count - 1] != c) ? count++ : 0xDEBAF;
-	return (count);
-}
-
-static int	ft_num_row(char const *s, char c, int pos)
+static int	ft_num_char(int k, char const *s, char c)
 {
 	int	count;
+	int	words;
+	int	tot;
 
 	count = 0;
-	pos -= 2;
-	if (s[pos] == c)
-		pos--;
-	while (s[pos] != c && pos >= 0)
+	tot = 0;
+	while (tot <= k && s[count])
 	{
-		count++;
-		pos--;
+		words = 0;
+		while (s[count] == c && s[count])
+			count++;
+		while (s[count] != c && s[count])
+		{
+			words++;
+			count++;
+		}
+		tot++;
 	}
-	return (count);
+	return (words);
 }
 
 static int	ft_num_col(char const *s, char c)
@@ -66,42 +42,44 @@ static int	ft_num_col(char const *s, char c)
 	return (num_col);
 }
 
-static void	ft_set_value(char *table, char const *s, int row, int pos)
+static char	**ft_add_value(int i, char c, char *s, char **split)
 {
-	table[row] = '\0';
-	row--;
-	pos -= 2;
-	while (row >= 0)
+	int	j;
+	int	k;
+	int	row;
+
+	k = 0;
+	while (s[i] == c && s[i])
+		i++;
+	while (s[i])
 	{
-		table[row] = s[pos];
-		pos--;
-		row--;
+		j = 0;
+		row = ft_num_char(k, s, c);
+		if (!(split[k] = (char *)malloc(sizeof(char) * (row + 1))))
+			return (0);
+		while (s[i] != c && s[i])
+			split[k][j++] = s[i++];
+		while (s[i] == c && s[i])
+			i++;
+		split[k][j] = '\0';
+		k++;
 	}
+	split[k] = NULL;
+	return (split);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char	**result;
-	int		cols;
-	int		row;
-	int		index;
-	int		pos;
+	char	**split;
+	int	i;
+	int	cols;
 
-	if (s == NULL)
-		return (NULL);
-	cols = ft_num_col(s, c);
-	if (!(result = (char **)malloc((cols + 1) * sizeof(char *))))
+	i = 0;
+	if (!s)
 		return (0);
-	result[cols] = NULL;
-	index = 0;
-	while (index < cols)
-	{
-		pos = ft_pos_row(s, c, index);
-		row = ft_num_row(s, c, pos);
-		if (!(result[index] = (char *)malloc((row + 1) * sizeof(char))))
-			return (0);
-		ft_set_value(result[index], s, row, pos);
-		index++;
-	}
-	return (result);
+	cols = ft_num_col(s, c);
+	if (!(split = (char **)malloc(sizeof(char *) * (cols + 1))))
+		return (0);
+	split = ft_add_value(i, c, (char *)s, split);
+	return (split);
 }

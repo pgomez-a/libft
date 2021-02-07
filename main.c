@@ -235,23 +235,23 @@ int	main(void)
 	printf("strtrim: %s\n", result);
 	*/
 
-	/*
-	char	s1[] = "split   ||this|for|me||||!|";
+	
+	char	s1[] = "   NO queda     merMelada encima       de        la     mesa";
 	char	**result;
 
-	result = ft_split(s1, '|');
+	result = ft_split(s1, ' ');
 	for (int i = 0; result[i]; i++)
 	{
 		printf("result[%d]: %s\n", i, result[i]);
 	}
-	*/	
+		
 
-	
+	/*	
 	char	*result;
 
 	result = ft_itoa(9);
 	printf("itoa: %s\n", result);
-
+	*/
 
 	/*	
 	char	ptr[] = "9999";
