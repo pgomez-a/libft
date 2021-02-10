@@ -175,6 +175,33 @@ The ft_strrchr() function returns a pointer to the matched character or NULL if 
 The strnstr() function locates the first occurrence of the null-terminated string needle in the string haystack, where not more than len characters are searched.  Characters that appear after a '\0' character are not searched.<br>
 If needle is an empty string, haystack is returned; if needle occurs nowhere in haystack, NULL is returned; otherwise a pointer to the first character of the first occurrence of needle is returned.
 
+**ft_strncmp**
+
+       int    ft_strncmp(const char *s1, const char *s2, size_t n);
+       
+The ft_strncmp() function lexicographically compare the NULL terminated strings s1 and s2. It compares not more than n characters. Because ft_strncmp() function is designed for comparing strings rather than binary data, characters that appear after a '\0' character are not compared.<br>
+The ft_strncmp() function return an interger greater than, equal to, or less than 0, according ad the string s1 is greater than, equal to, or less than the string s2. The comparison is done using unsigned characters, so that '\200' is greater than '\0'.
+
+**ft_atoi**
+
+       int    ft_atoi(const char *str);
+       
+The ft_atoi() function converts the initial portion of the string pointed to by str to int representation.
+
+**ft_isalpha**
+
+       int    ft_isalpha(int c);
+       
+The ft_isalpha() function tests for any character for which isupper(3) or islower(3) is true. The value of the argument must be representable as an unsigned char or the value of EOF.<br>
+The ft_isalpha() function returns zero if the character tests false and returns non-zero if the character tests true.
+
+**ft_isdigit**
+
+       int    ft_isdigit(int c);
+       
+The ft_isdigit() function tests for a decimal digit character. The value of the argument must be representable as an unsigned char or the value of EOF.<br>
+The ft_isdigit() function return zero if the character tests false and return non-zero if the character tests true.
+
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
