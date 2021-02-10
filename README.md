@@ -84,6 +84,7 @@ If you are interested in my work, please do not hesitate to contact me. I am ope
 ## Wiki Functions
 You may be wondering how to use and implement this functions in your code. As you can imagine, you can access the manual for most of the funcions that are currently on the libft, but there are other ones that don't have an specific man page in the terminal. So, to make you the work easier, I have written the behaviour of each function so that you can see in the same page what all functions have to do.
 
+### Libc Functions
 **ft_memset**
 
        void	*ft_memset(void *b, int c, size_t len)
@@ -249,7 +250,7 @@ The ft_calloc() function returns a pointer to allocated memory. If there is an e
        
 The ft_strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it. The pointer may subsequently be used as an argument to the function free(3). If insufficient memory if available, NULL is returned and errno is set no ENOMEM.
 
-
+### Additional Functions
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
