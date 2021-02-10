@@ -202,6 +202,54 @@ The ft_isalpha() function returns zero if the character tests false and returns 
 The ft_isdigit() function tests for a decimal digit character. The value of the argument must be representable as an unsigned char or the value of EOF.<br>
 The ft_isdigit() function return zero if the character tests false and return non-zero if the character tests true.
 
+**ft_isalnum**
+
+       int    ft_isalnum(int c);
+       
+The ft_isalnum() function tests for any character for which isalpha(3) or isdigit(3) is true. The value of the argument must be representable as an unsigned char or the value of EOF.<br>
+The ft_isalnum() function returns zero if the character tests false and returns non-zero if the character tests true.
+
+**ft_isascii**
+
+       int    ft_isascii(int c);
+       
+The ft_isascii() function tests for an ASCII character, which is any character between 0 and octal 0177 inclusive.
+
+**ft_isprint**
+
+       int    ft_isprint(int c);
+       
+The ft_isprint() funtcion tests for any printing character, including space. The value of the argument must be representable as an unsigned char or the value of EOF.<br>
+The ft_isprint() function returns zero if the character tests false and returns non-zero if the character tests true.
+
+**ft_toupper**
+
+       int    ft_toupper(int c);
+       
+The ft_toupper() function converts a lower-case letter to the corresponding upper-case letter. The argument must be representable as an unsigned char or the value of EOF.<br>
+If the argument is a lower-case letter, the ft_toupper() function returns the corresponding upper-case letter if there if one; otherwise, the argument is returned unchanged.
+
+**ft_tolower**
+
+       int    ft_tolower(int c);
+       
+The ft_tolower() function converts an upper-case letter to the corresponding lower-case letter. The argument must be representable as an unsigned char or the value of EOF.<br>
+If the argument is an upper-case letter, the ft_tolower() function returns the corresponding lower-case letter if there is one; otherwise, the argument is returned unchanged.
+
+**ft_calloc**
+
+       void   *ft_calloc(size_t count, size_t size);
+       
+The ft_calloc() function contiguosly allocates enough space for count objects that are size bytes of memory each and returns a pointer to the allocated memory. The allocated memory is filled with bytes of value zero.<br>
+The ft_calloc() function returns a pointer to allocated memory. If there is an error, it returns a NULL pointer and sets errno to ENOMEM.
+
+**ft_strdup**
+
+       char   *ft_strdup(const char *s1);
+       
+The ft_strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it. The pointer may subsequently be used as an argument to the function free(3). If insufficient memory if available, NULL is returned and errno is set no ENOMEM.
+
+
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
