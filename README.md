@@ -84,7 +84,7 @@ If you are interested in my work, please do not hesitate to contact me. I am ope
 ## Wiki Functions
 You may be wondering how to use and implement this functions in your code. As you can imagine, you can access the manual for most of the funcions that are currently on the libft, but there are other ones that don't have an specific man page in the terminal. So, to make you the work easier, I have written the behaviour of each function so that you can see in the same page what all functions have to do.
 
-###Libc Functions
+### Libc Functions
 **ft_memset**
 
        void	*ft_memset(void *b, int c, size_t len)
@@ -251,6 +251,71 @@ The ft_calloc() function returns a pointer to allocated memory. If there is an e
 The ft_strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it. The pointer may subsequently be used as an argument to the function free(3). If insufficient memory if available, NULL is returned and errno is set no ENOMEM.
 
 ### Additional Functions
+**ft_substr**
+
+       char   *ft_substr(char const *s, unsigned int start, size_t len);
+       
+The ft_substr() function allocates (with malloc(3)) and returns a "fresh" substring from the string given as argument. The substring begins at indexstart and is of size len. If start and len aren't refering to a valid substring, the behaviour is undefined. If the allocation fails, the function returns NULL.<br>
+The ft_substr() function returns the substring.
+
+**ft_strjoin**
+
+       char   *ft_strjoin(char const *s1, char const *s2);
+       
+The ft_strjoin() function allocates (with malloc(3)) and returns a "fresh" string ending with '\0', result of the concatenation of s1 and s2. If the allocation fails the function returns NULL.<br>
+The ft_strjoin() function returns the "fresh" string result of the concatenation of the 2 strings.
+
+**ft_strtrim**
+
+       char   *ft_strtrim(char const *s1, char const *set);
+       
+The ft_strtrim() function allocates (with malloc(3)) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string.<br>
+The ft_strtrim() function returns the trimmed string. NULL if the allocation fails.
+
+**ft_split**
+
+       char   **ft_split(char const *s, char c);
+       
+The ft_split() function allocates (with malloc(3)) and returns an array of strings obtained by splitting s using the character c as a delimiter. The array must be ended by a NULL pointer.<br>
+The ft_split() function returns the array of new strings result of the split. NULL if the allocation fails.
+
+**ft_itoa**
+
+       char   *ft_itoa(int n);
+       
+The ft_itoa() function allocates (with malloc(3)) and returns a string representating the integer received as an argument. Negative numbers must be handled.<br>
+The ft_itoa() function returns the string representating the integer. NULL if the allocation fails.
+
+**ft_strmapi**
+
+       char   *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+       
+The ft_strmapi() function applies the function f to each character of the string passed as argument to create a new string (with malloc(3)) resulting from successive applications of f.<br>
+The ft_strmapi() function returns the string created from the successive applications of f. Returns NULL if the allocation fails.
+
+**ft_putchar_fd**
+
+       void   ft_putchar_fd(char c, int fd);
+       
+The ft_putchar_fd() function outputs the character c to given file descriptor.
+
+**ft_putstr_fd**
+
+       void   ft_putstr_fd(char *s, int fd);
+       
+The ft_putstr_fd() function outputs the string c to given file descriptor.
+
+**ft_putendl_fd**
+
+       void   ft_putendl_fd(char *s, int fd);
+       
+The ft_putendl_fd() function outputs the string c to given file descriptor, followed by a newline.
+
+**ft_putnbr_fd**
+
+       void   ft_putnbr_fd(int n, int fd);
+       
+The ft_putnbr_fd() function outputs the integer n to given file descriptor.
 
  ## In closing...
 As you do your own projects, you can add new functions to this library.
