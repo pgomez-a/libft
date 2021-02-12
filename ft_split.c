@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/12 08:40:54 by pgomez-a          #+#    #+#             */
+/*   Updated: 2021/02/12 08:42:05 by pgomez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_num_char(int k, char const *s, char c)
@@ -68,11 +80,11 @@ static char	**ft_add_value(int i, char c, char *s, char **split)
 	return (split);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**split;
-	int	i;
-	int	cols;
+	int		i;
+	int		cols;
 
 	i = 0;
 	if (!s)
