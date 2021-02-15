@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 08:40:54 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/12 08:42:05 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/15 11:09:52 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ static int	ft_num_col(char const *s, char c)
 			num_col++;
 		count++;
 	}
-	(s[0] == c) ? num_col-- : 0xDEBAF;
-	(s[count - 1] == c) ? num_col-- : 0xDEBAF;
 	num_col++;
 	return (num_col);
 }

@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 13:11:14 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/12 13:40:03 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/15 08:43:22 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return (dst + i + 1);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

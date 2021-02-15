@@ -6,52 +6,36 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 11:37:28 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/01 13:11:04 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/15 11:08:12 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len_num(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	len;
-	int	count;
-
-	count = n;
-	len = 0;
-	while (count > 0)
+	if (n > -2147483648 || n <= 2147483647)
 	{
-		len++;
-		count /= 10;
-	}
-	return (len);
-}
-
-void		ft_putnbr_fd(int n, int fd)
-{
-	char	result[len_num(n)];
-	int		count;
-
-	count = 0;
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (n == 0)
-		ft_putchar_fd(n + '0', fd);
-	else
-	{
-		(n < 0) ? write(fd, "-", 1) : 0xDEBAF;
-		(n < 0) ? n *= -1 : 0xDEBAF;
-		while (n > 0)
+		if (n == -2147483648)
 		{
-			result[count] = (n % 10) + '0';
-			count++;
-			n /= 10;
+			ft_putchar_fd('-', fd);
+			ft_putchar_fd('2', fd);
+			ft_putnbr_fd(147483648, fd);
 		}
-		result[count] = '\0';
-		while (count > 0)
+		else if (n >= 10)
 		{
-			ft_putchar_fd(result[count - 1], fd);
-			count--;
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else if (n < 0)
+		{
+			n *= -1;
+			ft_putchar_fd('-', fd);
+			ft_putnbr_fd(n, fd);
+		}
+		else
+		{
+			ft_putchar_fd(n + '0', fd);
 		}
 	}
 }
