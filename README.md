@@ -317,6 +317,64 @@ The ft_putendl_fd() function outputs the string c to given file descriptor, foll
        
 The ft_putnbr_fd() function outputs the integer n to given file descriptor.
 
+### Linked Lists Functions
+**ft_lstnew**
+
+       t_list *ft_lstnew(void *content);
+       
+The ft_lstnew() function allocates (with malloc(3)) and returns a new element. The variable content is initialized with the value of the parameter content. The variable next is initialized to NULL.<br>
+The ft_lstnew() function returns the new element.
+
+**ft_lstadd_front**
+
+       void   ft_lstadd_front(t_list **alst, t_list *new);
+       
+The ft_lstadd_front() function add the element new at the beginning of the list.
+
+**ft_lstsize**
+
+       int    ft_lstsize(t_list *lst);
+       
+The ft_lstsize() function counts the number of elements in a list.<br>
+The ft_lstsize() function returns the length of the list.
+
+**ft_lstlast**
+
+       t_list *ft_lstlast(t_list *lst);
+       
+The ft_lstlast() function returns the last element of the list.
+
+**ft_lstadd_back**
+
+       void   ft_lstadd_back(t_list **alst, t_list *new);
+       
+The ft_lstadd_back() function adds the element new at the end of the list.
+
+**ft_lstdelone**
+
+       void   ft_lstdelone(t_list *lst, void (*del)(void *));
+       
+The ft_lstdelone() function takes as a parameter an element and frees the memory of the element's content using the function del given as a parameter. The memory of next must not be freed under any circumstance.
+
+**ft_lstclear**
+
+       void   ft_lstclear(t_list **lst, void (*del)(void *));
+       
+The ft_lstclear() function deletes and frees the given element and every successor of that element, using the function del and free(3). Finally, the pointer to the list must be set to NULL.
+
+**ft_lstiter**
+
+       void   ft_lstiter(t_list *lst, void (*f)(void *));
+       
+The ft_lstiter() function iterates the list lst and applies the function f to the content of each element.
+
+**ft_lstmap**
+
+       t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+       
+The ft_lstmap() function iterates the list lst and applies the function f to the content of each element. Creates a new list resulting of the successive applications of the function f. The del function is here to delete the content of an element if needed.<br>
+The ft_lstmap() function returns the new list. NULL if the allocation fails.
+
  ## In closing...
 As you do your own projects, you can add new functions to this library.
 In this case, the functions you find are the ones that have been useful to me to date. If you think that you won't use many of these functions, try creating your
