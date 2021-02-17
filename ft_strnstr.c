@@ -14,20 +14,20 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	count;
-	int	count_t;
-	int	search;
+	size_t	count;
+	size_t	count_t;
+	size_t	search;
 
 	count = 0;
 	count_t = 0;
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (count < (int)len && haystack[count])
+	while (count < len && haystack[count])
 	{
 		if (haystack[count] == needle[count_t])
 		{
 			search = count;
-			while (search < (int)len && haystack[search] == needle[count_t])
+			while (search < len && haystack[search] == needle[count_t])
 			{
 				search++;
 				count_t++;
