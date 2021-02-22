@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 13:11:14 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/15 08:43:22 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/19 08:47:42 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*dst_1;
 	unsigned char	*src_1;
-	size_t		count;
+	size_t			count;
 
 	count = 0;
 	dst_1 = (unsigned char *)dst;

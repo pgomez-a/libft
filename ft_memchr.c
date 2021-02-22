@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 13:20:24 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:37:02 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/02/19 08:47:55 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*temp;
-	size_t		count;
+	size_t			count;
 
 	count = 0;
 	temp = (unsigned char *)s;
