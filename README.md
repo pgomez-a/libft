@@ -18,9 +18,9 @@ more piece of our code.
 Thus, taking into account the functions of our **libft**, we can make the following classification:
 
 Libc Functions | Additional Functions | Linked Lists Functions | Personal Functions
-:------------- | :------------- | :------------- | -------------:
-ft_memset         | ft_substr       | ft_lstnew
-ft_bzero          | ft_strjoin      | ft_lstadd_front
+:------------- | :------------- | :------------- | :-------------
+ft_memset         | ft_substr       | ft_lstnew                | ft_hextoa
+ft_bzero          | ft_strjoin      | ft_lstadd_front          | ft_pow
 ft_memcpy         | ft_strtrim      | ft_lstsize
 ft_memccpy        | ft_split        | ft_lstlast
 ft_memmove        | ft_itoa         | ft_lstadd_back
