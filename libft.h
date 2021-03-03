@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 10:06:58 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/01 10:52:58 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/03 13:10:47 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,11 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void (*del)(void *));
+
+char				*ft_utoa(unsigned int n);
+
+char				*ft_hextoa(unsigned long n, char **str);
+
+int					ft_pot(int n, int pot);
 
 #endif
