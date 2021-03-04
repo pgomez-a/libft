@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 10:09:03 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:58:08 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:29:59 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	while (s[count])
 		count++;
-	if (!(result = (char *)malloc((count + 1) * sizeof(char))))
+	result = (char *)malloc((count + 1) * sizeof(char));
+	if (!result)
 		return (0);
 	result[count] = '\0';
 	while (count > 0)

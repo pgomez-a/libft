@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 08:40:54 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/15 11:09:52 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:27:31 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ static char	**ft_add_value(int i, char c, char *s, char **split)
 	{
 		j = 0;
 		row = ft_num_char(k, s, c);
-		if (!(split[k] = (char *)malloc(sizeof(char) * (row + 1))))
+		split[k] = (char *)malloc(sizeof(char) * (row + 1));
+		if (!split[k])
 			return (0);
 		while (s[i] != c && s[i])
 			split[k][j++] = s[i++];
@@ -78,7 +79,7 @@ static char	**ft_add_value(int i, char c, char *s, char **split)
 	return (split);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	int		i;
@@ -88,7 +89,8 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	cols = ft_num_col(s, c);
-	if (!(split = (char **)malloc(sizeof(char *) * (cols + 1))))
+	split = (char **)malloc(sizeof(char *) * (cols + 1));
+	if (!split)
 		return (0);
 	split = ft_add_value(i, c, (char *)s, split);
 	return (split);

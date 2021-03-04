@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:27:18 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:53:30 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:23:55 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	count_s1 = ft_strlen(s1);
 	count_s2 = ft_strlen(s2);
-	if (!(str = (char *)malloc((count_s1 + count_s2 + 1) * sizeof(char))))
+	str = (char *)malloc((count_s1 + count_s2 + 1) * sizeof(char));
+	if (!str)
 		return (0);
 	str[count_s1 + count_s2] = '\0';
 	while (count_s2 > 0)

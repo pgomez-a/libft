@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:26:38 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/01/26 09:54:14 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:25:23 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	ft_num_end(char const *s1, char const *s2)
 	return (count);
 }
 
-char		*ft_strtrim(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *s2)
 {
 	char	*result;
 	int		begin;
@@ -71,7 +71,8 @@ char		*ft_strtrim(char const *s1, char const *s2)
 	begin = ft_num_begin(s1, s2);
 	end = ft_num_end(s1, s2);
 	count = end - begin;
-	if (!(result = (char *)malloc((count + 2) * sizeof(char))))
+	result = (char *)malloc((count + 2) * sizeof(char));
+	if (!result)
 		return (0);
 	count = 0;
 	if (begin + end >= 0)

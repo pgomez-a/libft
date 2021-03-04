@@ -6,13 +6,13 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 09:21:30 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/03/03 13:10:48 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:32:23 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_pow(int n, int pot)
+int	ft_pow(int n, int pot)
 {
 	if (pot == 0)
 		return (1);

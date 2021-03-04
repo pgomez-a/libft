@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 08:56:13 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/03/03 13:09:03 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:30:54 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static unsigned int	ft_len_num(unsigned int n)
 	return (count);
 }
 
-static char			*ft_str_num(char *str, unsigned int n, unsigned int len)
+static char	*ft_str_num(char *str, unsigned int n, unsigned int len)
 {
 	unsigned int	mod;
 
@@ -43,13 +43,14 @@ static char			*ft_str_num(char *str, unsigned int n, unsigned int len)
 	return (str);
 }
 
-char				*ft_utoa(unsigned int n)
+char	*ft_utoa(unsigned int n)
 {
 	char			*result;
 	unsigned int	len_num;
 
 	len_num = ft_len_num(n);
-	if (!(result = (char *)malloc((len_num + 1) * sizeof(char))))
+	result = (char *)malloc((len_num + 1) * sizeof(char));
+	if (!result)
 		return (0);
 	if (n >= 0 && n < 10)
 	{

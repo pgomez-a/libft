@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:25:31 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/15 10:26:55 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:22:58 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	count_i;
 	unsigned int	count_t;
 
-	if (!(cpy = (char *)malloc((len + 1) * sizeof(char))) || !s)
+	cpy = (char *)malloc((len + 1) * sizeof(char));
+	if (!cpy || !s)
 		return (0);
 	count_i = 0;
 	if (start >= ft_strlen(s))

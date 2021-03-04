@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 10:06:58 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/03/03 13:10:47 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:49:51 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 void				*ft_memset(void *b, int c, size_t len);
 
@@ -47,7 +47,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 
 char				*ft_strnstr(const char *haystack, const char *needle,
-		size_t len);
+						size_t len);
 
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -108,7 +108,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-		void (*del)(void *));
+						void (*del)(void *));
 
 char				*ft_utoa(unsigned int n);
 

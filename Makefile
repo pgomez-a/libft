@@ -6,7 +6,7 @@
 #    By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/27 09:56:24 by pgomez-a          #+#    #+#              #
-#    Updated: 2021/03/03 13:09:28 by pgomez-a         ###   ########.fr        #
+#    Updated: 2021/03/04 10:44:10 by pgomez-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ fclean:		clean
 re:			fclean all
 
 normi:
-			@norminette -R CheckForbiddenSourceHeader $(SRCS) $(BON)
+			@norminette $(SRCS) $(BON)
 
 normi_h:
-			@norminette -R CheckDefine libft.h
+			@norminette libft.h

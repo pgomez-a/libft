@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 08:56:13 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/02/01 13:16:35 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:35:47 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ static char	*ft_str_num(char *str, int n, int len)
 	int	mod;
 	int	neg;
 
-	neg = (n < 0) ? -1 : 1;
-	str[len] = '\0';
-	len--;
+	neg = 1;
+	if (n < 0)
+		neg = -1;
+	str[len--] = '\0';
 	while (len > 1)
 	{
 		mod = (n % 10) * neg;
-		str[len] = mod + '0';
+		str[len--] = mod + '0';
 		n /= 10;
-		len--;
 	}
 	if (neg == 1)
 	{
@@ -53,7 +53,7 @@ static char	*ft_str_num(char *str, int n, int len)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*result;
 	int		len_num;
@@ -61,7 +61,8 @@ char		*ft_itoa(int n)
 	len_num = ft_len_num(n);
 	if (n <= 0)
 		len_num++;
-	if (!(result = (char *)malloc((len_num + 1) * sizeof(char))))
+	result = (char *)malloc((len_num + 1) * sizeof(char));
+	if (!result)
 		return (0);
 	if (n > 0 && n < 10)
 	{
