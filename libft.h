@@ -6,7 +6,7 @@
 /*   By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 10:06:58 by pgomez-a          #+#    #+#             */
-/*   Updated: 2021/03/04 11:49:51 by pgomez-a         ###   ########.fr       */
+/*   Updated: 2021/04/12 09:37:02 by pgomez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "./ft_printf/ft_printf.h"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
@@ -115,5 +120,9 @@ char				*ft_utoa(unsigned int n);
 char				*ft_hextoa(unsigned long n, char **str);
 
 int					ft_pot(int n, int pot);
+
+int					get_next_line(int fd, char **line);
+
+int					ft_printf(const char *format, ...);
 
 #endif
