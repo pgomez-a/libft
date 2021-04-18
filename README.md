@@ -23,8 +23,8 @@ Libc Functions | Additional Functions | Linked Lists Functions | Personal Functi
 ft_memset         | ft_substr       | ft_lstnew                | ft_utoa
 ft_bzero          | ft_strjoin      | ft_lstadd_front          | ft_hextoa
 ft_memcpy         | ft_strtrim      | ft_lstsize               | ft_pow
-ft_memccpy        | ft_split        | ft_lstlast
-ft_memmove        | ft_itoa         | ft_lstadd_back
+ft_memccpy        | ft_split        | ft_lstlast               | ft_printf
+ft_memmove        | ft_itoa         | ft_lstadd_back           | get_next_line
 ft_memchr         | ft_strmapi      | ft_lstdelone
 ft_memcmp         | ft_putchar_fd   | ft_lstclear
 ft_strlen         | ft_putstr_fd    | ft_lstiter
@@ -82,7 +82,7 @@ If you want to access the content of this project and learn more about the behav
        gcc -Wall -Werror -Wextra main.c -L. -lft
        
 ## Info for recruiters
-If you are interested in my work, please do not hesitate to contact me. I am open to join new and innovative projects, especially if they are related to Big Data and Artificial Intelligence. Remember that on my Read me page you can contact me in different ways, having access to my Linkedin account and my email.
+If you are interested in my work, please do not hesitate to contact me. I am open to join new and innovative projects, especially if they are related to Big Data and Artificial Intelligence. Remember that on my Readme page you can contact me in different ways, having access to my Linkedin account and my email.
 
 ## Wiki Functions
 You may be wondering how to use and implement this functions in your code. As you can imagine, you can access the manual for most of the funcions that are currently on the libft, but there are other ones that don't have an specific man page in the terminal. So, to make you the work easier, I have written the behaviour of each function so that you can see in the same page what all functions have to do.
