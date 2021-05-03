@@ -6,7 +6,7 @@
 #    By: pgomez-a <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/27 09:56:24 by pgomez-a          #+#    #+#              #
-#    Updated: 2021/04/09 17:16:05 by pgomez-a         ###   ########.fr        #
+#    Updated: 2021/04/28 14:10:49 by pgomez-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c		\
 			  ft_toupper.c ft_tolower.c ft_calloc.c ft_strdup.c ft_substr.c		\
 			  ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c		\
 			  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c		\
-			  ft_utoa.c ft_hextoa.c ft_pow.c get_next_line.c
+			  ft_utoa.c ft_hextoa.c ft_charstr.c ft_pow.c get_next_line.c
 
 FT_PRINTF	= ft_printf.c ./ft_printf/char_type.c ./ft_printf/hex_type.c ./ft_printf/numbers_width.c	\
 			  ./ft_printf/int_type.c ./ft_printf/manage_format.c ./ft_printf/manage_precision.c			\
