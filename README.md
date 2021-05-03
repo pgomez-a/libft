@@ -24,7 +24,7 @@ ft_memset         | ft_substr       | ft_lstnew                | ft_utoa
 ft_bzero          | ft_strjoin      | ft_lstadd_front          | ft_hextoa
 ft_memcpy         | ft_strtrim      | ft_lstsize               | ft_pow
 ft_memccpy        | ft_split        | ft_lstlast               | ft_charstr
-ft_memmove        | ft_itoa         | ft_lstadd_back           | get_printf
+ft_memmove        | ft_itoa         | ft_lstadd_back           | ft_printf
 ft_memchr         | ft_strmapi      | ft_lstdelone             | get_next_line
 ft_memcmp         | ft_putchar_fd   | ft_lstclear
 ft_strlen         | ft_putstr_fd    | ft_lstiter
