@@ -1,6 +1,5 @@
 # libft
-<img width="1919" alt="Mark obtained" src="https://user-images.githubusercontent.com/74931024/108680302-003d7c00-74ee-11eb-8a3a-e4447c300d7a.png">
-<br>
+<img width="1925" alt="libft" src="https://user-images.githubusercontent.com/74931024/117971497-473b5080-b32a-11eb-96ed-150955c6faf4.png">
 
 **libft** is a project in which you have to replicate the most basic functions of C, as well as implement other slightly more complex but very important functions
 too.
