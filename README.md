@@ -1,6 +1,8 @@
 # libft
 <img width="1925" alt="libft" src="https://user-images.githubusercontent.com/74931024/117971497-473b5080-b32a-11eb-96ed-150955c6faf4.png">
 
+**If you want to learn more about IT topics, visit my website:** [**IA Notes**](https://ia-notes.com/)
+
 **libft** is a project in which you have to replicate the most basic functions of C, as well as implement other slightly more complex but very important functions
 too.
 Thanks to our **libft** project we will be able to access to very commonly used functions while programming, saving time by not having to reprogram the same
